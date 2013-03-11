@@ -7,5 +7,6 @@
     = csrf_meta_tags
     = render 'layouts/header' 
   %body
-    = yield
-    = render 'layouts/footer' 
+    .container
+      = yield
+      = render 'layouts/footer' 
