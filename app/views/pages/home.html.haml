@@ -1,4 +1,11 @@
-%h1==Humblebrag
-%p
-	Share your best travel photos and win a trip somewhere amazing. 
-= link_to "Sign up now", "#"
+-if user_signed_in?
+  %h1
+    oh hello there
+-else
+  .center.hero-unit
+    %h1 
+      Humblebrag.
+    %p
+      Show the world where you've been.
+    %p
+      = link_to 'Sign up now!',  new_user_registration_path, class: "btn btn-large btn-primary"
